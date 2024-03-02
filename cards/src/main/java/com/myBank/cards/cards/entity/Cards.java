@@ -2,11 +2,13 @@ package com.myBank.cards.cards.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Getter @Setter @ToString
 @AllArgsConstructor @NoArgsConstructor
 @Table
+@EntityListeners(AuditingEntityListener.class)
 public class Cards extends BaseEntity{
 
     @Id
@@ -18,7 +20,7 @@ public class Cards extends BaseEntity{
     private String mobileNumber;
 
     @Column(name = "card_number")
-    private String cardNumber;
+    private Long cardNumber;
 
     @Column(name = "card_type")
     private String cardType;

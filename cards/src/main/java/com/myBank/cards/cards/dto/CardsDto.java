@@ -7,7 +7,7 @@ public class CardsDto {
 
     private String mobileNumber;
 
-    private String cardNumber;
+    private Long cardNumber;
 
     private String cardType;
 
